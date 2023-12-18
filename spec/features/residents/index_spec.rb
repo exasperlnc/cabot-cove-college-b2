@@ -7,7 +7,7 @@ RSpec.describe 'Resident Index Page' do
   end
 
   it 'has resident information' do
-    visit resident_path
+    visit '/residents'
 
     expect(page).to have_content('Logan')
     expect(page).to have_content('Carol')
