@@ -8,8 +8,8 @@ RSpec.describe 'Resident Show Page' do
     @c1 = Course.create!(name: 'Nerd School')
     @c2 = Course.create!(name: 'Underwater Basket Weaving')
 
-    @rc1 = ResidentCourse.create!(resident: "#{@r1}", course: "#{@c1}")
-    @rc2 = ResidentCourse.create!(resident: "#{@r2}", course: "#{@c2}")
+    @rc1 = ResidentCourse.create(resident: @r1, course: @c1)
+    @rc2 = ResidentCourse.create(resident: @r2, course: @c2)
   end
 
   it 'has resident name' do
