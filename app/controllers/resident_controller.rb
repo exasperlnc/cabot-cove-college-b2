@@ -1,5 +1,9 @@
 class ResidentController < ApplicationController
   def index
     @residents = Resident.all
-  end 
+  end
+  
+  def show
+    @resident = Resident.find(params[:id])
+  end
 end
