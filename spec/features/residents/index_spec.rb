@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Resident Index Page' do
   before :each do
-    @r1 = Resident.new(name: 'Logan', age: '69', occupation: 'street sweeper')
-    @r2 = Resident.new(name: 'Carol', age: '1000', occupation: 'who cares')
+    @r1 = Resident.create!(name: 'Logan', age: '69', occupation: 'street sweeper')
+    @r2 = Resident.create!(name: 'Carol', age: '1000', occupation: 'who cares')
   end
 
   it 'has resident information' do
