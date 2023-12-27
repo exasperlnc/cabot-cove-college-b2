@@ -16,4 +16,10 @@ RSpec.describe 'Resident Index Page' do
     expect(page).to have_content('street sweeper')
     expect(page).to have_content('who cares')
   end
+
+  it 'shows average age of residents' do
+    visit '/residents'
+
+    expect(page).to have_content("Average Resident Age: #{Resident.average(:age)}")
+  end
 end
