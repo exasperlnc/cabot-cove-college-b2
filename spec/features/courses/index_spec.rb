@@ -16,6 +16,6 @@ RSpec.describe 'Course Show Page' do
     visit "/courses/"
 
     expect(page).to have_content('Nerd School')
-    expect(page).to_not have_content('Underwater Basket Weaving')
+    expect(page).to have_content('Underwater Basket Weaving')
   end
 end
